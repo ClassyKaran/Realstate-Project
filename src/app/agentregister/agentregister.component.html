@@ -1,0 +1,63 @@
+<h2>Register Agent</h2>
+<form (ngSubmit)="registerAgent()">
+  <div>
+    <label>Username:</label>
+    <input type="text" [(ngModel)]="agent.username" name="username" required />
+  </div>
+  <div>
+    <label>Fullname:</label>
+    <input type="text" [(ngModel)]="agent.fullname" name="fullname" required />
+  </div>
+  <div>
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="agent.email" name="email" required />
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="agent.password" name="password" required />
+  </div>
+  <div>
+    <label>Mobile Number:</label>
+    <input type="text" [(ngModel)]="agent.mobileNo" name="mobileNo" required />
+  </div>
+  <div>
+    <label>Experience (in years):</label>
+    <input type="number" [(ngModel)]="agent.experience" name="experience" required />
+  </div>
+  <div>
+    <label>Role:</label>
+    <select [(ngModel)]="agent.role" name="role" required>
+      <option value="ADMIN">Admin</option>
+      <option value="AGENT">Agent</option>
+    </select>
+  </div>
+  <div>
+    <label>Status:</label>
+    <select [(ngModel)]="agent.status" name="status" required>
+      <option value="ACTIVE">Active</option>
+      <option value="INACTIVE">Inactive</option>
+    </select>
+  </div>
+  <div>
+    <label>Bio:</label>
+    <textarea [(ngModel)]="agent.bio" name="bio" placeholder="Tell us about yourself..." required></textarea>
+  </div>
+  <div>
+    <label>Rating (1-5):</label>
+    <input type="number" [(ngModel)]="agent.rating" name="rating" min="1" max="5" required />
+  </div>
+  <div>
+    <label>Profile Picture:</label>
+    <input type="file" (change)="onFileSelected($event)" />
+  </div>
+
+  <!-- Agreement Checkbox -->
+  <div class="agreement-container">
+    <input type="checkbox" id="agreement" [(ngModel)]="agreementChecked" name="agreement" />
+    <label for="agreement">I agree to the terms and conditions</label>
+  </div>
+
+  <!-- Register Button -->
+  <button type="submit" [disabled]="!agreementChecked">Register</button>
+</form>
+ 

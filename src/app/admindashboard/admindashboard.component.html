@@ -1,0 +1,639 @@
+<div class="wrapper">
+    <!-- Sidebar navbar -->
+    <nav *ngIf="isVisible" id="sidebar" class="bg-light border-dark">
+      <div class="sidebar-header p-3">
+        <div class="d-flex align-items-center flex-column">
+        
+          <img
+            src="https://images.unsplash.com/7/sunset-hair.jpg?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Profile Avatar"
+            class="rounded-circle"
+            width="70"
+            height="70"
+          />
+          <div class="p-2">
+              <h6 class="">Karan Rajput</h6>
+              <small class="text-muted">Administrator</small>
+          </div>
+        </div>  
+      </div>
+  
+  
+      <div class=" ">
+        <ul class="nav flex-column nav-tabs mx-3" role="tablist">
+          <li class="nav-item ">
+            <a
+              class="nav-link active fw-bold" data-bs-toggle="tab" href="#Dashboard" role="tab">
+              <i class="bi bi-house-door text-danger"></i>
+              <span >Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" data-bs-toggle="tab" href="#User" role="tab">
+              <i class="bi bi-people text-success"></i>
+              <span>User</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" data-bs-toggle="tab" href="#Agent" role="tab">
+              <i class="bi bi-people text-danger"></i>
+              <span>Agents</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" data-bs-toggle="tab" href="#Property" role="tab">
+              <i class="bi bi-map "></i>
+              <span>Property</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" data-bs-toggle="tab" href="#reports" role="tab">
+              <i class="bi bi-bar-chart text-warning"></i>
+              <span>Reports</span>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link fw-bold" data-bs-toggle="tab" href="#Content" role="tab">
+              <i class="bi bi-file-text text-primary"></i>
+              <span>Content</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+    <!-- Page Content  section -->
+    <div id="content">
+      <!-- Top navbar  in content section-->
+      <nav class="navbar navbar-expand-lg  bg-light shadow-sm ">
+        <div class="container-fluid">
+          <button type="button"(click)="toggle()" class="btn btn-dark btn-sm" >
+            <i class="bi bi-list"></i>
+          </button>
+          <button class="btn btn-outline-dark btn-sm">
+            <i class="bi bi-person"></i>
+            LogOut
+          </button>
+        </div>
+      </nav>
+    
+      <!-- Main content  content section-->
+      <div class="container-fluid">
+        <div class="tab-content">
+          <!-- Dashboard Tab -->
+          <div class="tab-pane fade show active" id="Dashboard" role="tabpanel">
+          <div class=" mt-4">
+            <h3 class="mb-4">Real Estate Overview</h3>
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-white bg-dark">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Properties</h5>
+                                    <p class="card-text display-4">156</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-white bg-danger">
+                                <div class="card-body">
+                                    <h5 class="card-title">Properties Sold</h5>
+                                    <p class="card-text display-4">42</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-white bg-success">
+                                <div class="card-body">
+                                    <h5 class="card-title">New Listings</h5>
+                                    <p class="card-text display-4">8</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card text-white bg-warning">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pending Sales</h5>
+                                    <p class="card-text display-4">15</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row">
+                        <div class="col-md-8 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Recent Property Listings
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <i class="bi bi-house-door me-2"></i>
+                                        3 BHK Apartment in City Center - $250,000
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="bi bi-house me-2"></i>
+                                        4 BHK Villa with Pool - $500,000
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="bi bi-building me-2"></i>
+                                        Commercial Space in Business Park - $1,000,000
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="bi bi-house-door me-2"></i>
+                                        2 BHK Condo with Sea View - $180,000
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="bi bi-house me-2"></i>
+                                        5 BHK Luxury Penthouse - $750,000
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Quick Actions
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="bi bi-plus-circle me-2"></i>Add New Property
+                                        </button>
+                                        <button class="btn btn-success" type="button">
+                                            <i class="bi bi-person-plus me-2"></i>Add New Client
+                                        </button>
+                                        <button class="btn btn-info" type="button">
+                                            <i class="bi bi-calendar-event me-2"></i>Schedule Viewing
+                                        </button>
+                                        <button class="btn btn-warning" type="button">
+                                            <i class="bi bi-file-earmark-text me-2"></i>Generate Report
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Upcoming Appointments
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <i class="bi bi-calendar me-2"></i>
+                                        Property Viewing - 123 Main St, 2:00 PM
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="bi bi-calendar me-2"></i>
+                                        Client Meeting - John Doe, 4:30 PM
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="bi bi-calendar me-2"></i>
+                                        Property Inspection - 456 Elm St, 10:00 AM
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Recent Transactions
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <i class="bi bi-check-circle me-2"></i>
+                                        789 Oak Ave sold for $350,000
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="bi bi-check-circle me-2"></i>
+                                        101 Pine St leased for $2,000/month
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="bi bi-check-circle me-2"></i>
+                                        202 Maple Rd sold for $275,000
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+  
+          <!-- User Tab -->
+          <div class="tab-pane fade" id="User" role="tabpanel">
+            <div class="mt-4">
+              <h3>User</h3>
+            <app-user></app-user>
+            </div>
+          </div>
+  
+          <!-- Agents mangae Tab -->
+          <div class="tab-pane fade" id="Agent" role="tabpanel">
+      
+            <div class="mt-4">
+              <h3>Agents</h3>
+              <div class="card">
+                <div class="card-header">
+                    Agent List
+                </div>
+                <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Total</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#12345</td>
+                      <td>John Doe</td>
+                      <td>2023-05-20</td>
+                      <td><span class="badge bg-success">Completed</span></td>
+                      <td>$150.00</td>
+                      <td class="d-flex align-items-center "> 
+                        <button class='btn btn-success btn-sm'>A</button>
+                        <button class='btn btn-danger btn-sm mx-1'>d</button>
+                      </td>
+                    </tr>
+  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+              </div>
+            </div>
+  
+  
+          </div>
+  
+          <!-- property manage Tab -->
+          <div class="tab-pane fade" id="Property" role="tabpanel">
+            <div class="mt-4">
+              <div class="container mt-4">
+                <h3 class="mb-4">Property Management</h3>
+        
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Search properties...">
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select">
+                            <option selected>Filter by type</option>
+                            <option>Residential</option>
+                            <option>Commercial</option>
+                            <option>Industrial</option>
+                            <option>Land</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary w-100">
+                            <i class="bi bi-plus-circle me-2"></i>Add Property
+                        </button>
+                    </div>
+                </div>
+        
+  
+                <div class="row">
+                  <div class="col-md-3 mb-3">
+                      <div class="card" >
+                          <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                               class="card-img-top" alt="Property Image" style="height: 150px; object-fit: cover;">
+                          <div class="card-body" style="padding: 10px;">
+                              <h6 class="card-title">3 BHK Apartment</h6>
+                              <p class="card-text"><i class="bi bi-geo-alt me-2"></i>123 Main St</p>
+                              <p class="card-text"><strong>Price:</strong> $250,000</p>
+                              <div class="d-flex justify-content-between">
+                                  <span><i class="bi bi-rulers me-2"></i>1500 sq ft</span>
+                                  <span><i class="bi bi-house-door me-2"></i>3 BHK</span>
+                              </div>
+                          </div>
+                          <div class="card-footer p-2">
+                              <button class="btn btn-primary btn-sm me-1">Edit</button>
+                              <button class="btn btn-info btn-sm me-1">View</button>
+                              <button class="btn btn-success btn-sm">Schedule</button>
+                          </div>
+                      </div>
+                  </div>
+              
+                  <div class="col-md-3 mb-3">
+                      <div class="card" >
+                          <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                               class="card-img-top" alt="Property Image" style="height: 150px; object-fit: cover;">
+                          <div class="card-body" style="padding: 10px;">
+                              <h6 class="card-title">Business Park</h6>
+                              <p class="card-text"><i class="bi bi-geo-alt me-2"></i>456 Business Ave</p>
+                              <p class="card-text"><strong>Price:</strong> $1M</p>
+                              <div class="d-flex justify-content-between">
+                                  <span><i class="bi bi-rulers me-2"></i>5000 sq ft</span>
+                                  <span><i class="bi bi-building me-2"></i>Office</span>
+                              </div>
+                          </div>
+                          <div class="card-footer p-2">
+                              <button class="btn btn-primary btn-sm me-1">Edit</button>
+                              <button class="btn btn-info btn-sm me-1">View</button>
+                              <button class="btn btn-success btn-sm">Schedule</button>
+                          </div>
+                      </div>
+                  </div>
+              
+                  <div class="col-md-3 mb-3">
+                      <div class="card" >
+                          <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                               class="card-img-top" alt="Property Image" style="height: 150px; object-fit: cover;">
+                          <div class="card-body" style="padding: 10px;">
+                              <h6 class="card-title">4 BHK Villa</h6>
+                              <p class="card-text"><i class="bi bi-geo-alt me-2"></i>789 Luxury Lane</p>
+                              <p class="card-text"><strong>Price:</strong> $500K</p>
+                              <div class="d-flex justify-content-between">
+                                  <span><i class="bi bi-rulers me-2"></i>3000 sq ft</span>
+                                  <span><i class="bi bi-house me-2"></i>4 BHK</span>
+                              </div>
+                          </div>
+                          <div class="card-footer p-2">
+                              <button class="btn btn-primary btn-sm me-1">Edit</button>
+                              <button class="btn btn-info btn-sm me-1">View</button>
+                              <button class="btn btn-success btn-sm">Schedule</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                      <div class="card" >
+                          <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                               class="card-img-top" alt="Property Image" style="height: 150px; object-fit: cover;">
+                          <div class="card-body" style="padding: 10px;">
+                              <h6 class="card-title">4 BHK Villa</h6>
+                              <p class="card-text"><i class="bi bi-geo-alt me-2"></i>789 Luxury Lane</p>
+                              <p class="card-text"><strong>Price:</strong> $500K</p>
+                              <div class="d-flex justify-content-between">
+                                  <span><i class="bi bi-rulers me-2"></i>3000 sq ft</span>
+                                  <span><i class="bi bi-house me-2"></i>4 BHK</span>
+                              </div>
+                          </div>
+                          <div class="card-footer p-2">
+                              <button class="btn btn-primary btn-sm me-1">Edit</button>
+                              <button class="btn btn-info btn-sm me-1">View</button>
+                              <button class="btn btn-success btn-sm">Schedule</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+  
+  
+  
+  
+        
+                <nav aria-label="Property pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+           
+            </div>
+          </div>
+  
+          <!-- Reports Tab -->
+          <div class="tab-pane fade" id="reports" role="tabpanel">
+            <div class="mt-4">
+              <h3>Reports Analytics</h3>
+            
+                <div class="row mb-4">
+                  <div class="col-md-6">
+                    <div class="card">
+                      <div class="card-header">
+                        Sales Performance
+                      </div>
+                      <div class="card-body">
+                        <canvas id="salesChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card">
+                      <div class="card-header">
+                        Property Type Distribution
+                      </div>
+                      <div class="card-body">
+                        <canvas id="propertyTypeChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="row mb-4">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <div class="card-header">
+                        Key Metrics
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Average Days on Market
+                          <span class="badge bg-primary rounded-pill">45</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Total Revenue (YTD)
+                          <span class="badge bg-success rounded-pill">$1.5M</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Conversion Rate
+                          <span class="badge bg-info rounded-pill">12%</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card">
+                      <div class="card-header">
+                        Top Performing Agents
+                      </div>
+                      <div class="card-body">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Agent</th>
+                              <th>Properties Sold</th>
+                              <th>Total Value</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>John Doe</td>
+                              <td>15</td>
+                              <td>$3.2M</td>
+                            </tr>
+                            <tr>
+                              <td>Jane Smith</td>
+                              <td>12</td>
+                              <td>$2.8M</td>
+                            </tr>
+                            <tr>
+                              <td>Mike Johnson</td>
+                              <td>10</td>
+                              <td>$2.5M</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="row mb-4">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        Generate Custom Reports
+                      </div>
+                      <div class="card-body">
+                        <form>
+                          <div class="row mb-3">
+                            <div class="col-md-4">
+                              <label for="reportType" class="form-label">Report Type</label>
+                              <select id="reportType" class="form-select">
+                                <option>Sales Summary</option>
+                                <option>Property Performance</option>
+                                <option>Client Acquisition</option>
+                                <option>Market Trends</option>
+                              </select>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="dateRange" class="form-label">Date Range</label>
+                              <select id="dateRange" class="form-select">
+                                <option>Last 30 days</option>
+                                <option>Last 3 months</option>
+                                <option>Last 6 months</option>
+                                <option>Last year</option>
+                                <option>Custom range</option>
+                              </select>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="format" class="form-label">Format</label>
+                              <select id="format" class="form-select">
+                                <option>PDF</option>
+                                <option>Excel</option>
+                                <option>CSV</option>
+                              </select>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Generate Report</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+            </div>
+          </div>
+  
+  
+      <!-- contatent tab -->
+          <div class="tab-pane fade" id="Content" role="tabpanel">
+            <div class="mt-4">
+              <h3>Edit Blog</h3>
+              <div class="card">
+                <div class="card-header">
+                    User List
+                </div>
+                <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Total</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#12345</td>
+                      <td>John Doe</td>
+                      <td>2023-05-20</td>
+                      <td><span class="badge bg-success">Completed</span></td>
+                      <td>$150.00</td>
+                      <td class="d-flex align-items-center "> 
+                        <button class='btn btn-success btn-sm'>A</button>
+                        <button class='btn btn-danger btn-sm mx-1'>d</button>
+                      </td>
+                    </tr>
+  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+            </div>
+  
+  
+            <div class="mt-4">
+              <h3>Edit Contact</h3>
+              <div class="card">
+                <div class="card-header">
+                    User List
+                </div>
+                <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Total</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#12345</td>
+                      <td>John Doe</td>
+                      <td>2023-05-20</td>
+                      <td><span class="badge bg-success">Completed</span></td>
+                      <td>$150.00</td>
+                      <td class="d-flex align-items-center "> 
+                        <button class='btn btn-success btn-sm'>A</button>
+                        <button class='btn btn-danger btn-sm mx-1'>d</button>
+                      </td>
+                    </tr>
+  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+            </div>
+  
+  
+  
+  
+          </div>
+  
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
