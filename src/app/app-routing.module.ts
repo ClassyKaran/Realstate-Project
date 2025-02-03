@@ -11,11 +11,12 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
-
+import { AgentdashboardComponent } from './agentdashboard/agentdashboard.component';
 const routes: Routes = [
 
   { path: 'userlogin', component: UserloginComponent},
   { path: 'userregister', component: UserregisterComponent},
+  { path: 'agentpanel', component: AgentdashboardComponent},
   { path: 'agentlogin', component: AgentloginComponent},
   { path: 'agentregister', component: AgentregisterComponent},
   { path: 'adminregister', component: AdminregisterComponent},

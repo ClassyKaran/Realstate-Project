@@ -235,41 +235,7 @@
       
             <div class="mt-4">
               <h3>Agents</h3>
-              <div class="card">
-                <div class="card-header">
-                    Agent List
-                </div>
-                <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>Order ID</th>
-                      <th>Customer</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Total</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>#12345</td>
-                      <td>John Doe</td>
-                      <td>2023-05-20</td>
-                      <td><span class="badge bg-success">Completed</span></td>
-                      <td>$150.00</td>
-                      <td class="d-flex align-items-center "> 
-                        <button class='btn btn-success btn-sm'>A</button>
-                        <button class='btn btn-danger btn-sm mx-1'>d</button>
-                      </td>
-                    </tr>
-  
-                  </tbody>
-                </table>
-              </div>
-            </div>
-              </div>
+            <app-agent></app-agent>
             </div>
   
   
@@ -279,116 +245,14 @@
           <div class="tab-pane fade" id="Property" role="tabpanel">
             <div class="mt-4">
               <div class="container mt-4">
-                <h3 class="mb-4">Property Management</h3>
+                <h3 class="mb-4">Property listing</h3>
         
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Search properties...">
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-select">
-                            <option selected>Filter by type</option>
-                            <option>Residential</option>
-                            <option>Commercial</option>
-                            <option>Industrial</option>
-                            <option>Land</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary w-100">
-                            <i class="bi bi-plus-circle me-2"></i>Add Property
-                        </button>
-                    </div>
-                </div>
-        
-  
-                <div class="row">
-                  <div class="col-md-3 mb-3">
-                      <div class="card" >
-                          <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                               class="card-img-top" alt="Property Image" style="height: 150px; object-fit: cover;">
-                          <div class="card-body" style="padding: 10px;">
-                              <h6 class="card-title">3 BHK Apartment</h6>
-                              <p class="card-text"><i class="bi bi-geo-alt me-2"></i>123 Main St</p>
-                              <p class="card-text"><strong>Price:</strong> $250,000</p>
-                              <div class="d-flex justify-content-between">
-                                  <span><i class="bi bi-rulers me-2"></i>1500 sq ft</span>
-                                  <span><i class="bi bi-house-door me-2"></i>3 BHK</span>
-                              </div>
-                          </div>
-                          <div class="card-footer p-2">
-                              <button class="btn btn-primary btn-sm me-1">Edit</button>
-                              <button class="btn btn-info btn-sm me-1">View</button>
-                              <button class="btn btn-success btn-sm">Schedule</button>
-                          </div>
-                      </div>
-                  </div>
-              
-                  <div class="col-md-3 mb-3">
-                      <div class="card" >
-                          <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                               class="card-img-top" alt="Property Image" style="height: 150px; object-fit: cover;">
-                          <div class="card-body" style="padding: 10px;">
-                              <h6 class="card-title">Business Park</h6>
-                              <p class="card-text"><i class="bi bi-geo-alt me-2"></i>456 Business Ave</p>
-                              <p class="card-text"><strong>Price:</strong> $1M</p>
-                              <div class="d-flex justify-content-between">
-                                  <span><i class="bi bi-rulers me-2"></i>5000 sq ft</span>
-                                  <span><i class="bi bi-building me-2"></i>Office</span>
-                              </div>
-                          </div>
-                          <div class="card-footer p-2">
-                              <button class="btn btn-primary btn-sm me-1">Edit</button>
-                              <button class="btn btn-info btn-sm me-1">View</button>
-                              <button class="btn btn-success btn-sm">Schedule</button>
-                          </div>
-                      </div>
-                  </div>
-              
-                  <div class="col-md-3 mb-3">
-                      <div class="card" >
-                          <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                               class="card-img-top" alt="Property Image" style="height: 150px; object-fit: cover;">
-                          <div class="card-body" style="padding: 10px;">
-                              <h6 class="card-title">4 BHK Villa</h6>
-                              <p class="card-text"><i class="bi bi-geo-alt me-2"></i>789 Luxury Lane</p>
-                              <p class="card-text"><strong>Price:</strong> $500K</p>
-                              <div class="d-flex justify-content-between">
-                                  <span><i class="bi bi-rulers me-2"></i>3000 sq ft</span>
-                                  <span><i class="bi bi-house me-2"></i>4 BHK</span>
-                              </div>
-                          </div>
-                          <div class="card-footer p-2">
-                              <button class="btn btn-primary btn-sm me-1">Edit</button>
-                              <button class="btn btn-info btn-sm me-1">View</button>
-                              <button class="btn btn-success btn-sm">Schedule</button>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-3 mb-3">
-                      <div class="card" >
-                          <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                               class="card-img-top" alt="Property Image" style="height: 150px; object-fit: cover;">
-                          <div class="card-body" style="padding: 10px;">
-                              <h6 class="card-title">4 BHK Villa</h6>
-                              <p class="card-text"><i class="bi bi-geo-alt me-2"></i>789 Luxury Lane</p>
-                              <p class="card-text"><strong>Price:</strong> $500K</p>
-                              <div class="d-flex justify-content-between">
-                                  <span><i class="bi bi-rulers me-2"></i>3000 sq ft</span>
-                                  <span><i class="bi bi-house me-2"></i>4 BHK</span>
-                              </div>
-                          </div>
-                          <div class="card-footer p-2">
-                              <button class="btn btn-primary btn-sm me-1">Edit</button>
-                              <button class="btn btn-info btn-sm me-1">View</button>
-                              <button class="btn btn-success btn-sm">Schedule</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+               
               
   
-  
+  <h1>yaha pr prooerty list ka table hoga jo aproval aur delete ke liye aayi hai
+    approve hone k baad agent ke panel mai show honge
+  </h1>
   
   
         

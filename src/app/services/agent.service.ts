@@ -27,5 +27,31 @@ export class AgentService {
     const loginDetails = { username, password };
     return this.http.post<Agent>(`${this.apiUrl}/loginAgent`, loginDetails);
   }
+
+  
+  getAllAgents(): Observable<Agent[]> {
+    return this.http.get<Agent[]>(`${this.apiUrl}/getAllAgents`)
+  }
+
+  getAgentById(agentId: number): Observable<Agent> {
+    return this.http.get<Agent>(`${this.apiUrl}/getAgentById/${agentId}`)
+  }
+
+
+  deleteAgent(agentId: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/deleteAgent/${agentId}`)
+  }
+
+
+  updateAgent(agentId: number, agent: Agent, profilePicture?: File): Observable<Agent> {
+    const formData = new FormData()
+    formData.append("agent", JSON.stringify(agent))
+    if (profilePicture) {
+      formData.append("profilePicture", profilePicture)
+    }
+    return this.http.put<Agent>(`${this.apiUrl}/updateAgent/${agentId}`, formData)
+  }
+
+
 }
 

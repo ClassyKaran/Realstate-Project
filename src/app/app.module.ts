@@ -19,6 +19,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { UserComponent } from './user/user.component';
+import { AgentComponent } from './agent/agent.component';
+import { AgentdashboardComponent } from './agentdashboard/agentdashboard.component';
 
 
 
@@ -37,6 +39,8 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     AdmindashboardComponent,
     UserComponent,
+    AgentComponent,
+    AgentdashboardComponent,
   ],
   imports: [
     BrowserModule,
