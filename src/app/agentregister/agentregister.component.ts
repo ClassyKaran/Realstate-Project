@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AgentService } from '../services/agent.service';
-import { Agent } from '../Modals/agent';
+import { AgentService } from '../../services/agent.service';
+import { Agent } from '../../modal/agent';
+
 
 @Component({
   selector: 'app-agentregister',

@@ -1,7 +1,8 @@
-import { AgentService } from './../services/agent.service';
 
 import { Component, type OnInit } from "@angular/core"
-import type { Agent } from "../Modals/agent"
+import { Agent } from "../../modal/agent";
+import { AgentService } from '../../services/agent.service';
+
 
 @Component({
   selector: 'app-agent',
@@ -10,20 +11,20 @@ import type { Agent } from "../Modals/agent"
 })
 export class AgentComponent implements OnInit {
     agents: Agent[] = []
-  
+
     constructor(private AgentService: AgentService) {}
-  
+
     ngOnInit(): void {
       this.loadAgents()
     }
-  
+
     loadAgents(): void {
       this.AgentService.getAllAgents().subscribe(
         (agents) => (this.agents = agents),
         (error) => console.error("Error fetching agents:", error),
       )
     }
-  
+
     deleteAgent(id: number): void {
       if (confirm("Are you sure you want to delete this agent?")) {
         this.AgentService.deleteAgent(id).subscribe(
@@ -37,7 +38,7 @@ export class AgentComponent implements OnInit {
     }
 
 //updateAgent
-  
+
 
   }
-  
+

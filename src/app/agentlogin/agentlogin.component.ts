@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AgentService } from '../services/agent.service';
+import { AgentService } from '../../services/agent.service';
 import { Router } from '@angular/router';
 
 @Component({

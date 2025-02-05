@@ -1,7 +1,17 @@
+// import { Injectable } from '@angular/core';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class UserService {
+
+//   constructor() { }
+// }
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from '../Modals/user';
+import { User } from '../modal/user';
 
 
 @Injectable({

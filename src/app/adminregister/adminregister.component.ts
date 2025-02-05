@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { AdminService } from '../services/admin.service';
+import { AdminService } from './../../services/admin.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Admin } from '../Modals/admin';
+import { Admin } from '../../modal/admin';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -20,7 +20,7 @@ export class AdminregisterComponent {
     role: 'ADMIN', // Default value
     status: 'ACTIVE' // Default value
   };
-  
+
   profilePicture: File | null = null;
   errorMessage: string = '';
 

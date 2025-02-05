@@ -12,8 +12,12 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { AgentdashboardComponent } from './agentdashboard/agentdashboard.component';
+import { TestingComponent } from './testing/testing.component';
+import { PropertyComponent } from './property/property.component';
+import { RecentListedComponent } from './recent-listed/recent-listed.component';
 const routes: Routes = [
 
+  { path: '', component: HomeComponent},
   { path: 'userlogin', component: UserloginComponent},
   { path: 'userregister', component: UserregisterComponent},
   { path: 'agentpanel', component: AgentdashboardComponent},
@@ -25,7 +29,10 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent},
   { path: 'contactus', component: ContactusComponent},
   { path: 'footer', component: FooterComponent},
-  { path: '', component: HomeComponent},
+  { path: 'testing', component: TestingComponent},
+  { path: 'property', component: PropertyComponent},
+  { path: 'recent', component: RecentListedComponent},
+
 
 ];
 

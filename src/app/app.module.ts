@@ -21,6 +21,9 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { UserComponent } from './user/user.component';
 import { AgentComponent } from './agent/agent.component';
 import { AgentdashboardComponent } from './agentdashboard/agentdashboard.component';
+import { TestingComponent } from './testing/testing.component';
+import { PropertyComponent } from './property/property.component';
+import { RecentListedComponent } from './recent-listed/recent-listed.component';
 
 
 
@@ -41,6 +44,9 @@ import { AgentdashboardComponent } from './agentdashboard/agentdashboard.compone
     UserComponent,
     AgentComponent,
     AgentdashboardComponent,
+    TestingComponent,
+    PropertyComponent,
+    RecentListedComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,7 @@ import { AgentdashboardComponent } from './agentdashboard/agentdashboard.compone
     FormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,17 @@
+// import { Injectable } from '@angular/core';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class AgentService {
+
+//   constructor() { }
+// }
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Agent } from '../Modals/agent';
+import { Agent } from '../modal/agent';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +38,7 @@ export class AgentService {
     return this.http.post<Agent>(`${this.apiUrl}/loginAgent`, loginDetails);
   }
 
-  
+
   getAllAgents(): Observable<Agent[]> {
     return this.http.get<Agent[]>(`${this.apiUrl}/getAllAgents`)
   }

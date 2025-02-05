@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ContactusService } from '../services/contactus.service';
+import { ContactusService } from '../../services/contactus.service';
 
 @Component({
   selector: 'app-contactus',

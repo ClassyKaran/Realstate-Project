@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/user.service';
+import { UserService } from '../../services/user.service';
 
 interface User {
   id: number;
@@ -51,6 +51,6 @@ export class UserComponent implements OnInit {
     }
   }
 
- 
+
 }
 

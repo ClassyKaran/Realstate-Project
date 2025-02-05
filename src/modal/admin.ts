@@ -1,3 +1,13 @@
+// export class Admin {
+//   adminId?: number;
+//   username: string = '';
+//   password: string = '';
+//   email: string = '';
+//   fullName: string = '';
+//   profilePicture?: File | null;
+// }
+
+
 export class Admin {
   adminId?: number;
   username: string;
